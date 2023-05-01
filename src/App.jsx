@@ -34,13 +34,17 @@ const options = [
 ];
 const App = () => {
   const [selected, setSelected] = useState(options[0]);
+  const [showDropdown, setShowDropDown] = useState(true);
   return (
     <div>
-      <Dropdown
-        selected={selected}
-        onSelectedChange={setSelected}
-        options={options}
-      />
+      <button onClick={() =>setShowDropDown(!showDropdown)}>Toggle Dropdown</button>
+      {showDropdown ?
+        <Dropdown
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={options}
+        /> : null
+      }
     </div>
   );
 };
