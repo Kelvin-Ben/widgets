@@ -36,17 +36,17 @@ const options = [
     value: "blue",
   },
   {
-    label: 'A shade of skyblue',
-    value: 'cyan'
-  }
+    label: "A shade of skyblue",
+    value: "cyan",
+  },
 ];
 const App = () => {
-  const [selected, setSelected] = useState(options[0])
+  const [selected, setSelected] = useState(options[0]);
   return (
     <div>
       <Header />
       <Route path="/">
-        <Accordion items={items}/>
+        <Accordion items={items} />
       </Route>
       <Route path="/list">
         <Search />
